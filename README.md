@@ -39,11 +39,11 @@
 
 
 
-### [1、安装pip](https://docs.ake999.com/#/ProjectDocs/flask/Falsk+Vue图书管理系统?id=_1、安装pip)
+### [1、安装pip](/#/ProjectDocs/flask/Falsk+Vue图书管理系统?id=_1、安装pip)
 
 pip install flask -i https://pypi.tuna.tsinghua.edu.cn/simple
 
-### [2、小试牛刀](https://docs.ake999.com/#/ProjectDocs/flask/Falsk+Vue图书管理系统?id=_2、小试牛刀)
+### [2、小试牛刀](/#/ProjectDocs/flask/Falsk+Vue图书管理系统?id=_2、小试牛刀)
 
 ```python3
 from flask import  Flask
@@ -57,7 +57,7 @@ if __name__=="__main__":
     app.run(port=2020,host="127.0.0.1",debug=True)Copy to clipboardErrorCopied
 ```
 
-### [3、路由分发](https://docs.ake999.com/#/ProjectDocs/flask/Falsk+Vue图书管理系统?id=_3、路由分发)
+### [3、路由分发](/#/ProjectDocs/flask/Falsk+Vue图书管理系统?id=_3、路由分发)
 
 main.py
 
@@ -194,13 +194,13 @@ def delete_book(book_id):
     return jsonify({'code': 200, 'data': '删除成功'})Copy to clipboardErrorCopied
 ```
 
-### [4、安装SQLAlchemy mysql-connector-python（orm操作mysql组件）](https://docs.ake999.com/#/ProjectDocs/flask/Falsk+Vue图书管理系统?id=_4、安装sqlalchemy-mysql-connector-python（orm操作mysql组件）)
+### [4、安装SQLAlchemy mysql-connector-python（orm操作mysql组件）](/#/ProjectDocs/flask/Falsk+Vue图书管理系统?id=_4、安装sqlalchemy-mysql-connector-python（orm操作mysql组件）)
 
 pip3.8 install flask-SQLAlchemy SQLAlchemy mysql-connector-python flask-*mysqldb* -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 flask_SQLAlchemy
 
-### [5、数据库关系导入数据库](https://docs.ake999.com/#/ProjectDocs/flask/Falsk+Vue图书管理系统?id=_5、数据库关系导入数据库)
+### [5、数据库关系导入数据库](/#/ProjectDocs/flask/Falsk+Vue图书管理系统?id=_5、数据库关系导入数据库)
 
 models.py
 
@@ -283,11 +283,11 @@ db.init_app(app)
 grate = migrate(app, db)Copy to clipboardErrorCopied
 ```
 
-### [6、安装迁移库](https://docs.ake999.com/#/ProjectDocs/flask/Falsk+Vue图书管理系统?id=_6、安装迁移库)
+### [6、安装迁移库](/#/ProjectDocs/flask/Falsk+Vue图书管理系统?id=_6、安装迁移库)
 
 pip3.8 install Flask-Migrate -i https://pypi.tuna.tsinghua.edu.cn/simple
 
-### [7、迁移数据库](https://docs.ake999.com/#/ProjectDocs/flask/Falsk+Vue图书管理系统?id=_7、迁移数据库)
+### [7、迁移数据库](/#/ProjectDocs/flask/Falsk+Vue图书管理系统?id=_7、迁移数据库)
 
 flask db init #只执行一次
 
@@ -295,7 +295,7 @@ flask db migrate #生成迁移脚本
 
 flask db upgrade #运行迁移脚本，同步到数据库中
 
-### [8、作者增删改查](https://docs.ake999.com/#/ProjectDocs/flask/Falsk+Vue图书管理系统?id=_8、作者增删改查)
+### [8、作者增删改查](/#/ProjectDocs/flask/Falsk+Vue图书管理系统?id=_8、作者增删改查)
 
 ```python
 from models import *
@@ -370,7 +370,7 @@ def delete_authors(author_id):
     return jsonify({'code': 200, 'data': '删除成功'})Copy to clipboardErrorCopied
 ```
 
-### [9、出版社增删改查](https://docs.ake999.com/#/ProjectDocs/flask/Falsk+Vue图书管理系统?id=_9、出版社增删改查)
+### [9、出版社增删改查](/#/ProjectDocs/flask/Falsk+Vue图书管理系统?id=_9、出版社增删改查)
 
 ```python
 from models import *
@@ -446,7 +446,7 @@ def delete_publishers(publish_id):
     return jsonify({'code': 200, 'data': '删除成功'})Copy to clipboardErrorCopied
 ```
 
-### [10、图书增删改查](https://docs.ake999.com/#/ProjectDocs/flask/Falsk+Vue图书管理系统?id=_10、图书增删改查)
+### [10、图书增删改查](/#/ProjectDocs/flask/Falsk+Vue图书管理系统?id=_10、图书增删改查)
 
 ```python
 from models import *
@@ -557,7 +557,7 @@ def delete_book(book_id):
     return jsonify({'code': 200, 'data': '删除成功'})Copy to clipboardErrorCopied
 ```
 
-### [11、跨域问题解决](https://docs.ake999.com/#/ProjectDocs/flask/Falsk+Vue图书管理系统?id=_11、跨域问题解决)
+### [11、跨域问题解决](/#/ProjectDocs/flask/Falsk+Vue图书管理系统?id=_11、跨域问题解决)
 
 ```
 from flask_cors import CORS
@@ -565,7 +565,7 @@ from flask_cors import CORS
 CORS(app, resources={r"/*": {"origins": "*"}})Copy to clipboardErrorCopied
 ```
 
-### [12、静态文件](https://docs.ake999.com/#/ProjectDocs/flask/Falsk+Vue图书管理系统?id=_12、静态文件)
+### [12、静态文件](/#/ProjectDocs/flask/Falsk+Vue图书管理系统?id=_12、静态文件)
 
 ```
 app=Flask(__name__,static_folder='upimg')Copy to clipboardErrorCopied
@@ -573,7 +573,7 @@ app=Flask(__name__,static_folder='upimg')Copy to clipboardErrorCopied
 
 根目录下新建upimg
 
-### [13、注册接口](https://docs.ake999.com/#/ProjectDocs/flask/Falsk+Vue图书管理系统?id=_13、注册接口)
+### [13、注册接口](/#/ProjectDocs/flask/Falsk+Vue图书管理系统?id=_13、注册接口)
 
 ```python
 from flask import  Flask,render_template,request,jsonify
@@ -627,7 +627,7 @@ def register():
         return jsonify(ret)Copy to clipboardErrorCopied
 ```
 
-### [14、登录接口](https://docs.ake999.com/#/ProjectDocs/flask/Falsk+Vue图书管理系统?id=_14、登录接口)
+### [14、登录接口](/#/ProjectDocs/flask/Falsk+Vue图书管理系统?id=_14、登录接口)
 
 ```python
 from flask import  Flask,render_template,request,jsonify
@@ -744,7 +744,7 @@ def login():
         return jsonify(ret)Copy to clipboardErrorCopied
 ```
 
-### [15、图片上传接口](https://docs.ake999.com/#/ProjectDocs/flask/Falsk+Vue图书管理系统?id=_15、图片上传接口)
+### [15、图片上传接口](/#/ProjectDocs/flask/Falsk+Vue图书管理系统?id=_15、图片上传接口)
 
 ```python
 from flask import  Flask,render_template,request,jsonify
